@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
 
 const AddJob = () => {
     const { user } = useContext(AuthContext);
@@ -9,9 +10,10 @@ const AddJob = () => {
     const handleAddJob = (e) => {
         e.preventDefault();
         const form = e.target
-        const taskData = {
+        const jobData = {
             email: form.email.value,
             jobTitle: form.jobTitle.value,
+            image: form.image.value,
             deadline: form.date.value,
             maxPrice: form.maxPrice.value,
             minPrice: form.minPrice.value,
@@ -19,8 +21,18 @@ const AddJob = () => {
             description: form.description.value
         }
 
+        try {
+            axios.post(`http://localhost:5000/jobs`, jobData, {
+                headers: {
+                    'Content-type': 'application/json',
+                }
+            })
+            .then(res => console.log(res.data))
 
-        console.log(taskData);
+        } catch (error) {
+            console.log(error.message);
+        }
+        // console.log(taskData);
     }
 
 
@@ -43,6 +55,10 @@ const AddJob = () => {
                                     <div class="sm:col-span-2">
                                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Job Title</label>
                                         <input type="text" name="jobTitle" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type job name" required />
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Job imageURL</label>
+                                        <input type="text" name="image" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter job imageURL" required />
                                     </div>
                                     <div class="w-full">
                                         <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deadline</label>
