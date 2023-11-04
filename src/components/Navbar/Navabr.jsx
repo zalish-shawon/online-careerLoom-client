@@ -1,13 +1,25 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
-const Navabr = () => {
-    const navItems =
+const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogout = () => {
+    logOut()
+    .then(res => console.log(res.user))
+    .catch(error => console.log(error.message))
+  }
+
+
+  const navItems =
     <>
       <NavLink to={'/'}><li className="font-semibold"><a>Home</a></li></NavLink>
       <NavLink to={'/usersTasks'}><li className="font-semibold"><a>Users tasks</a></li></NavLink>
     </>
-    return (
-        <div className="max-w-[1300px] mx-auto bg-gray-200 mt-2">
+
+  return (
+    <div className="max-w-[1200px] mx-auto bg-gray-200 mt-2">
       <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -29,32 +41,32 @@ const Navabr = () => {
         </div>
         <div className="navbar-end">
          
-          
-             <div className="dropdown dropdown-end">
+          {
+            user ? <div className="dropdown dropdown-end">
             <label tabIndex={0} className="cursor-pointer flex items-center m-1 ml-3">
               <div className="avatar online">
                 
                  <div className="w-12 rounded-full">
-                  {/* <img src={user?.photoURL} /> */}
+                  <img src={user?.photoURL} />
                 </div>
                 
               </div>
             </label>
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
               <div className="pl-5">
-                {/* <p>{user?.displayName}</p> */}
-                 {/* <li><button onClick={handleLogout}>Logout</button></li> */}
+                <p>{user?.displayName}</p>
+                 <li><button onClick={handleLogout}>Logout</button></li>
               </div>
             </ul>
           </div>
-           <Link to={'/login'}><button className="btn">Login</button></Link>
+          : <Link to={'/login'}><button className="btn">Login</button></Link>
 
-        
+          }
         </div>
         
       </div>
     </div>
-    );
+  );
 };
 
-export default Navabr;
+export default Navbar;
