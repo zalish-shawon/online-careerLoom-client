@@ -16,7 +16,7 @@ const Navbar = () => {
   const navItems =
     <>
       <NavLink to={'/'}><li className="font-semibold"><a>Home</a></li></NavLink>
-      <NavLink to={'/usersTasks'}><li className="font-semibold"><a>Add job</a></li></NavLink>
+      <NavLink to={'/addJob'}><li className="font-semibold"><a>Add job</a></li></NavLink>
       <NavLink to={'/usersTasks'}><li className="font-semibold"><a>My posted jobs</a></li></NavLink>
       <NavLink to={'/usersTasks'}><li className="font-semibold"><a>My bid</a></li></NavLink>
       <NavLink to={'/usersTasks'}><li className="font-semibold"><a>Bid request</a></li></NavLink>
@@ -65,7 +65,7 @@ const Navbar = () => {
               </div>
             </ul>
           </div>
-          : <Link to={'/login'}><button className="btn">Login</button></Link>
+          : <Link to={'/login'}><button className="btn bg-[orangered] text-white">Login</button></Link>
 
           }
         </div>
