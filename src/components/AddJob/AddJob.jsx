@@ -3,9 +3,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
 
 const AddJob = () => {
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
+    
 
     const handleAddJob = (e) => {
         e.preventDefault();
@@ -18,7 +22,7 @@ const AddJob = () => {
             maxPrice: form.maxPrice.value,
             minPrice: form.minPrice.value,
             category: form.category.value,
-            description: form.description.value
+            description: form.description.value,
         }
 
         try {
@@ -27,11 +31,22 @@ const AddJob = () => {
                     'Content-type': 'application/json',
                 }
             })
-            .then(res => console.log(res.data))
+            .then(res => {
+                Swal.fire(
+                    'Welcome!',
+                    'Job has been added!',
+                    'success'
+                  )
+                  
+                  navigate('/postedJobs')
+                
+            })
 
         } catch (error) {
             console.log(error.message);
         }
+        form.reset();
+        
         // console.log(taskData);
     }
 

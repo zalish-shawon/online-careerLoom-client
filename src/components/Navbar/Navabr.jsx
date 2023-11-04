@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <NavLink to={'/'}><li className="font-semibold"><a>Home</a></li></NavLink>
       <NavLink to={'/addJob'}><li className="font-semibold"><a>Add job</a></li></NavLink>
-      <NavLink to={'/usersTasks'}><li className="font-semibold"><a>My posted jobs</a></li></NavLink>
+      <NavLink to={'/postedJobs'}><li className="font-semibold"><a>My posted jobs</a></li></NavLink>
       <NavLink to={'/usersTasks'}><li className="font-semibold"><a>My bid</a></li></NavLink>
       <NavLink to={'/usersTasks'}><li className="font-semibold"><a>Bid request</a></li></NavLink>
     </>
