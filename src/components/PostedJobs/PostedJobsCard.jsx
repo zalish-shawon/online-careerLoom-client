@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 
+import { Link } from "react-router-dom";
+
 const PostedJobsCard = ({ job }) => {
-    const { image, jobTitle, deadline, maxPrice, minPrice, category, description } = job;
+    const {_id, image, jobTitle, deadline, maxPrice, minPrice, category, description } = job;
     return (
 
         <div>
@@ -28,9 +31,11 @@ const PostedJobsCard = ({ job }) => {
                     <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
                         Delete
                     </button>
+                    <Link to={`/updateJob/${_id}`}>
                     <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-green-500 text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
                         Update
                     </button>
+                    </Link>
                 </div>
             </div>
         </div>
