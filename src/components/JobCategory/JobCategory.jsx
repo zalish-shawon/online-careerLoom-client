@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import WebDevJobs from './WebDevJobs';
+import DigitalJobs from './DigitalJobs';
+import GraphicsJobs from './GraphicsJobs';
 
 const JobCategory = () => {
     const [jobs, setJobs] = useState([])
@@ -46,9 +48,23 @@ const JobCategory = () => {
 
             <TabPanel>
               {/* second tab */}
+              <div className='grid grid-cols-1 lg:grid-cols-3'>
+                    {
+                        digitalJobs.map(job => <DigitalJobs key={job._id} job={job}></DigitalJobs>)
+                    }
+               </div>
+
+
             </TabPanel>
             <TabPanel>
                {/* third tab */}
+               <div className='grid grid-cols-1 lg:grid-cols-3'>
+                    {
+                        graphicsJobs.map(job => <GraphicsJobs key={job._id} job={job}></GraphicsJobs>)
+                    }
+               </div>
+
+
             </TabPanel>
             
         </Tabs>
