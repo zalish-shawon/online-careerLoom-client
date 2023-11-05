@@ -16,7 +16,8 @@ const JobDetails = () => {
         const form = e.target
         const bidData = {
             jobTitle: jobTitle,
-            email: form.bidderEmail.value,
+            email: form.email.value,
+            bidderEmail: form.bidderEmail.value,
             deadline: form.date.value,
             status: 'pending',
             price: form.price.value,
@@ -61,7 +62,7 @@ const JobDetails = () => {
                                     <img src={image} alt="" />
                                 </div>
                                 <div class="flex flex-col items-center text-center justify-center" bis_skin_checked="1">
-                                    <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Posted: {user?.email}</h2>
+                                    <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Posted: {email}</h2>
                                     <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" bis_skin_checked="1"></div>
 
 
