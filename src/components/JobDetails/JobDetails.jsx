@@ -1,14 +1,46 @@
 /* eslint-disable react/no-unknown-property */
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const JobDetails = () => {
-
+    const navigate = useNavigate()
     const jobDetails = useLoaderData();
     const { user } = useContext(AuthContext);
     const { _id, image, jobTitle, deadline, maxPrice, minPrice, category, description, email } = jobDetails;
 
+    const handleBideJob = (e) => {
+        e.preventDefault();
+        const form = e.target
+        const bidData = {
+            jobTitle: jobTitle,
+            email: form.bidderEmail.value,
+            deadline: form.date.value,
+            status: 'pending',
+            price: form.price.value,
+
+        }
+
+        try {
+            axios.post(`http://localhost:5000/mybids`, bidData,{
+                headers: { 'Content-Type': 'application/json'}
+            })
+            .then(res => {
+                console.log(res.data);
+                Swal.fire(
+                    'Welcome!',
+                    'Job has successfully bidden',
+                    'success'
+                  )
+                  navigate('/mybids')
+            })
+        } catch (error) {
+            console.log(error.message);
+        }
+        // console.log(bidData);
+    }
 
 
     return (
@@ -62,7 +94,7 @@ const JobDetails = () => {
                 <section class="bg-white dark:bg-gray-900">
                         <div class="py-8 pt-2 px-4 mx-auto max-w-2xl lg:py-6">
 
-                            <form  method="POST" action="#">
+                            <form onSubmit={handleBideJob}  method="POST" action="#">
                                 <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                                     <div class="sm:col-span-2">
                                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Employer Email</label>
@@ -70,7 +102,7 @@ const JobDetails = () => {
                                     </div>
                                     <div class="sm:col-span-2">
                                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bidder Email</label>
-                                        <input defaultValue={user?.email} disabled type="email" name="email" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required />
+                                        <input defaultValue={user?.email} disabled type="email" name="bidderEmail" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required />
                                     </div>
                                     
                                     <div class="w-full">
