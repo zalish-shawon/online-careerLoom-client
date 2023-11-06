@@ -9,7 +9,7 @@ const JobDetails = () => {
     const navigate = useNavigate()
     const jobDetails = useLoaderData();
     const { user } = useContext(AuthContext);
-    const { _id, image, jobTitle, deadline, maxPrice, minPrice, category, description, email } = jobDetails;
+    const {  image, jobTitle, deadline, maxPrice, minPrice, category, description, email } = jobDetails;
 
     const handleBideJob = (e) => {
         e.preventDefault();

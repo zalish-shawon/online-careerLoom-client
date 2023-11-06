@@ -80,7 +80,7 @@ const BidReqTd = ({reqs}) => {
             </td>
             <td class="py-3 px-6 text-center">
                 {
-                    status === 'in progress' || status === 'rejected' ? 
+                    status === 'in progress' || status === 'rejected' || status === 'completed' ? 
                     " "
                     :
                     <div>

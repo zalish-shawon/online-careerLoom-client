@@ -11,13 +11,13 @@ const DigitalJobs = ({job}) => {
         <div class="max-w-2xl mx-auto">
 
             <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
+               
                     <img class="rounded-t-lg" src={image} alt="" />
-                </a>
+               
                 <div class="p-5">
-                    <a href="#">
+                    
                         <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{jobTitle}</h5>
-                    </a>
+                    
                     <p class="font-normal text-gray-700 mb-1 dark:text-gray-400">{description.slice(0, 80)}</p>
                     <div>
                         <p className="font-semibold text-red-500">Deadline: {deadline}</p>

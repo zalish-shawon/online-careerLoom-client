@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import BidReqTd from "./BidReqTd";
+import NoDataFound from "../NotDataFound/NoDataFound";
 
 const BidRequest = () => {
     const {user} = useContext(AuthContext);
@@ -30,7 +31,11 @@ const BidRequest = () => {
             <div>
                 <h1 className="text-4xl font-bold mt-10 text-center">Bid <span className="text-[orangered]">Request</span> </h1>
             </div>
-            <div class="overflow-x-auto mt-5">
+            {
+                bidRequest.length === 0 ?
+                <NoDataFound></NoDataFound>
+                :
+                <div class="overflow-x-auto mt-5">
             <div class="max-w-[1200px] mx-auto flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
                 <div class="w-full lg:w-5/6">
                     <div class="bg-white shadow-md rounded my-6">
@@ -53,6 +58,7 @@ const BidRequest = () => {
                 </div>
             </div>
         </div>
+            }
             </div>
      
     );

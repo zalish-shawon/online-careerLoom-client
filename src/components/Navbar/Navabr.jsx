@@ -2,13 +2,17 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import logo from "../../../public/Careerloom-logo.png"
+import toast, { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
 
   const handleLogout = () => {
     logOut()
-    .then(res => console.log(res.user))
+    .then(res => {
+     
+      toast.success('Successfully logged out!')
+    })
     .catch(error => console.log(error.message))
   }
 
@@ -23,8 +27,12 @@ const Navbar = () => {
     </>
 
   return (
-    <div className="max-w-[1200px] mx-auto bg-gray-200 mt-2">
-      <div className="navbar ">
+    <div className=" bg-blueGray-200 mt-2">
+      <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
+      <div className="navbar max-w-[1200px] mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

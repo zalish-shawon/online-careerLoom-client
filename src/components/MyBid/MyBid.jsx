@@ -3,6 +3,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import MybidsTd from "./MybidsTd";
 import { AuthContext } from "../Provider/AuthProvider";
+import NoDataFound from "../NotDataFound/NoDataFound";
 
 const MyBid = () => {
     const {user} = useContext(AuthContext)
@@ -34,7 +35,7 @@ const MyBid = () => {
             <div>
         {
             onlymyBid.length === 0 ? 
-            'Not data found'
+           <NoDataFound></NoDataFound>
             :
             <div class="overflow-x-auto mt-5">
             <div class="max-w-[1200px] mx-auto flex items-center justify-center bg-gray-100 font-sans overflow-hidden">

@@ -1,77 +1,75 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-unknown-property */
 
 const Footer = () => {
     return (
         <div>
-            <footer class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
-                {/* <!-- Grid --> */}
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
-                    <div class="col-span-full hidden lg:col-span-1 lg:block">
-                        <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Brand</a>
-                        <p class="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">© 2022 Preline.</p>
-                    </div>
-                    {/* <!-- End Col --> */}
-
-                    <div>
-                        <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">Product</h4>
-
-                        <div class="mt-3 grid space-y-3 text-sm">
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Pricing</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Changelog</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Docs</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Download</a></p>
+            <footer class="relative bg-blueGray-200 pt-8 pb-6">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap text-left lg:text-left">
+                        <div class="w-full lg:w-6/12 px-4">
+                            <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+                            <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                                Find us on any of these platforms, we respond 1-2 business days.
+                            </h5>
+                            <div class="mt-6 lg:mb-0 mb-6">
+                                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                    <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                    <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                    <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-6/12 px-4">
+                            <div class="flex flex-wrap items-top mb-6">
+                                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                                    <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free Products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="w-full lg:w-4/12 px-4">
+                                    <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    {/* <!-- End Col --> */}
-
-                    <div>
-                        <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">Company</h4>
-
-                        <div class="mt-3 grid space-y-3 text-sm">
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">About us</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Blog</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Careers</a> <span class="inline text-blue-600 dark:text-blue-500">— We're hiring</span></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Customers</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Newsroom</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Sitemap</a></p>
+                    <hr class="my-6 border-blueGray-300" />
+                    <div class="flex flex-wrap items-center md:justify-between justify-center">
+                        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                            <div class="text-sm text-blueGray-500 font-semibold py-1">
+                                Copyright © <span id="get-current-year">2021</span><a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank" /> Notus JS by
+                                <a href="https://www.creative-tim.com?ref=njs-profile" class="text-blueGray-500 hover:text-blueGray-800">Creative Tim</a>.
+                            </div>
                         </div>
                     </div>
-                    {/* <!-- End Col --> */}
-
-                    <div>
-                        <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">Resources</h4>
-
-                        <div class="mt-3 grid space-y-3 text-sm">
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Community</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Help & Support</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">eBook</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">What's New</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Status</a></p>
-                        </div>
-                    </div>
-                    {/* <!-- End Col --> */}
-
-                    <div>
-                        <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">Developers</h4>
-
-                        <div class="mt-3 grid space-y-3 text-sm">
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Api</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Status</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">GitHub</a> <span class="inline text-blue-600 dark:text-blue-500">— New</span></p>
-                        </div>
-
-                        <h4 class="mt-7 text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">Industries</h4>
-
-                        <div class="mt-3 grid space-y-3 text-sm">
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Financial Services</a></p>
-                            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" href="#">Education</a></p>
-                        </div>
-                    </div>
-                    {/* <!-- End Col --> */}
                 </div>
-                {/* <!-- End Grid --> */}
-
-            
             </footer>
         </div>
     );
