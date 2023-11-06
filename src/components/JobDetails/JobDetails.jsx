@@ -20,6 +20,7 @@ const JobDetails = () => {
             bidderEmail: form.bidderEmail.value,
             deadline: form.date.value,
             status: 'pending',
+            statusforRequester: 'pending',
             price: form.price.value,
 
         }

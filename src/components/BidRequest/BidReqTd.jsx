@@ -2,13 +2,17 @@
 /* eslint-disable react/no-unknown-property */
 
 import axios from "axios";
-import { useState } from "react";
 
 const BidReqTd = ({reqs}) => {
     const {_id,jobTitle, bidderEmail, deadline, price, status} = reqs;
-    const [updatedStatus, setUpdatedStatus] = useState('pending');
     const newStatus = {
         status: 'in progress',
+        statusforRequester: 'in progress',
+    }
+
+    const rejectStatus = {
+        status: 'rejected',
+        statusforRequester: 'cancelled',
     }
 
     const handleJobAccept = (_id) => {
@@ -19,12 +23,32 @@ const BidReqTd = ({reqs}) => {
                 }
             })
             .then(res => console.log(res.data))
-            setUpdatedStatus('in progress')
+            
+            window.location.reload();
 
         } catch (error) {
             console.log(error.message);
         }
     }
+
+
+    const handleJobReject = (_id) => {
+        try {
+            axios.patch(`http://localhost:5000/mybids/${_id}`, rejectStatus, {
+                headers: {
+                    'Content-type': 'application/json',
+                }
+            })
+            .then(res => console.log(res.data))
+            window.location.reload();
+
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
+ 
+
 
     return (
         <tbody class="text-gray-600 text-sm font-light">
@@ -52,14 +76,21 @@ const BidReqTd = ({reqs}) => {
                 </div>
             </td>
             <td class="py-3 px-6 text-center">
-                <span class="bg-purple-200 font-semibold text-purple-600 py-1 px-3 rounded-full text-xs">{updatedStatus}</span>
+                <span class="bg-purple-200 font-semibold text-purple-600 py-1 px-3 rounded-full text-xs">{status}</span>
             </td>
             <td class="py-3 px-6 text-center">
-                <button onClick={() => handleJobAccept(_id)} className="text-white btn px-1 py-1 btn-primary mr-2">Accept</button>
-                <button  className="text-white btn px-1 py-1 btn-secondary">Reject</button>
+                {
+                    status === 'in progress' || status === 'rejected' ? 
+                    " "
+                    :
+                    <div>
+                        <button onClick={() => handleJobAccept(_id)} 
+                         className="text-white btn px-1 py-1 btn-primary mr-2">Accept</button>
+                     <button onClick={() => handleJobReject(_id)}  className="text-white btn px-1 py-1 btn-secondary">Reject</button>
+                    </div>
+                }
             </td>
         </tr>
-
 
     </tbody>
     );

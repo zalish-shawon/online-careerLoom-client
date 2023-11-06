@@ -17,11 +17,13 @@ import UpdateJob from './components/UpdateJob/UpdateJob.jsx';
 import JobDetails from './components/JobDetails/JobDetails.jsx';
 import MyBid from './components/MyBid/MyBid.jsx';
 import BidRequest from './components/BidRequest/BidRequest.jsx';
+import NotFound from './components/PageNotFound/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <NotFound></NotFound>,
     children: [
       {
         path: "/",
