@@ -13,7 +13,7 @@ const Home = () => {
 
                 <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
                     <div>
-                        <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">Start your journey with <span class="text-[orangered]">CareerLoom</span></h1>
+                        <h1 class="block text-3xl font-bold text-gray-400 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">Start your journey with <span class="text-[orangered]">CareerLoom</span></h1>
                         <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">Hand-picked professionals and expertly crafted components, designed for any kind of entrepreneur.</p>
 
 
@@ -143,7 +143,7 @@ const Home = () => {
 
             </div>
             <div>
-                <h1 className="text-5xl font-bold text-center mt-16">Browse By Category</h1>
+                <h1 className="border-2 border-rose-100 p-3 text-5xl font-bold text-center mt-16 text-gray-400">Browse By <span className="text-[orangered]">Job Category</span></h1>
                 <div>
                     <JobCategory></JobCategory>
                 </div>
