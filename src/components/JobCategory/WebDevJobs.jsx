@@ -10,7 +10,7 @@ const WebDevJobs = ({ job }) => {
         <div>
             <div class="max-w-2xl mx-auto">
 
-                <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-white shadow-md border border-gray-200 rounded-lg lg:max-w-sm dark:bg-gray-800 dark:border-gray-700 h-[460px]">
                     
                         <img class="rounded-t-lg" src={image} alt="" />
                    

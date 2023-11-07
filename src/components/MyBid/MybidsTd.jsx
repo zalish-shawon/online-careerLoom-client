@@ -52,8 +52,10 @@ const MybidsTd = ({bids}) => {
                     <span class="bg-purple-200 font-semibold text-purple-600 py-1 px-3 rounded-full text-xs">{statusforRequester}</span>
                 </td>
                 {
-                    statusforRequester === "cancelled" || statusforRequester === 'completed' ?
-                     " "
+                    statusforRequester === "cancelled" || statusforRequester === 'completed' || statusforRequester === 'pending' ?
+                    <td class="py-3 px-6 text-center">
+                    <button disabled onClick={() =>  handleJobComplete(_id)} className="text-white btn px-1 py-1 bg-slate-200 ">Complete</button>
+                    </td>
                     :
                     <td class="py-3 px-6 text-center">
                     <button onClick={() =>  handleJobComplete(_id)} className="text-white btn px-1 py-1 btn-primary ">Complete</button>

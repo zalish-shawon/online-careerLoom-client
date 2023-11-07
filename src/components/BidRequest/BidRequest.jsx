@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import BidReqTd from "./BidReqTd";
 import NoDataFound from "../NotDataFound/NoDataFound";
+import { Helmet } from "react-helmet-async";
 
 const BidRequest = () => {
     const {user} = useContext(AuthContext);
@@ -25,9 +26,20 @@ const BidRequest = () => {
     const bidReq = bidRequest.filter(req => user?.email === req.email);
     console.log(bidReq);
 
+    const handleSorting = () => {
+        const sortedData = [...bidRequest]
+        // console.log(sortedData);
+        sortedData.sort((a,b) => a.status.localeCompare(b.status)); 
+        setBidRequest(sortedData);
+        // console.log(myBids);
+    }
+
 
     return (
         <div>
+            <Helmet>
+            <title>CareerLoom | Bid request</title>
+            </Helmet>
             <div>
                 <h1 className="text-4xl font-bold mt-10 text-center">Bid <span className="text-[orangered]">Request</span> </h1>
             </div>
@@ -36,6 +48,7 @@ const BidRequest = () => {
                 <NoDataFound></NoDataFound>
                 :
                 <div class="overflow-x-auto mt-5">
+                    <div className="flex justify-center mb-3"><button onClick={handleSorting} className="text-white rounded-lg px-2 py-1 btn btn-outline btn-primary">Sort by status</button></div>
             <div class="max-w-[1200px] mx-auto flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
                 <div class="w-full lg:w-5/6">
                     <div class="bg-white shadow-md rounded my-6">

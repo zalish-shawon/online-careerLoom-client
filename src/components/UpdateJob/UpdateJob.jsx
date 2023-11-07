@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -46,6 +47,9 @@ const UpdateJob = () => {
 }
     return (
         <div>
+            <Helmet>
+            <title>CareerLoom | Update job</title>
+            </Helmet>
             <div>
                 <h1 className="text-4xl font-bold mt-10 text-center">Update your <span className="text-[orangered]">Job</span></h1>
             </div>
@@ -95,7 +99,7 @@ const UpdateJob = () => {
                                     <textarea defaultValue={description} id="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Your description here"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-[orangered] rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                            <button type="submit" class="w-full inline-flex items-center justify-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-[orangered] rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-orange-700">
                                 Update Job
                             </button>
                         </form>

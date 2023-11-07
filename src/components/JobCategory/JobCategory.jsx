@@ -39,7 +39,7 @@ const JobCategory = () => {
 
             <TabPanel>
                 {/* fist tab */}
-               <div className='grid grid-cols-1 lg:grid-cols-3'>
+               <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
                     {
                         webJobs.map(job => <WebDevJobs key={job._id} job={job}></WebDevJobs>)
                     }
@@ -48,7 +48,7 @@ const JobCategory = () => {
 
             <TabPanel>
               {/* second tab */}
-              <div className='grid grid-cols-1 lg:grid-cols-3'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
                     {
                         digitalJobs.map(job => <DigitalJobs key={job._id} job={job}></DigitalJobs>)
                     }
@@ -58,7 +58,7 @@ const JobCategory = () => {
             </TabPanel>
             <TabPanel>
                {/* third tab */}
-               <div className='grid grid-cols-1 lg:grid-cols-3'>
+               <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
                     {
                         graphicsJobs.map(job => <GraphicsJobs key={job._id} job={job}></GraphicsJobs>)
                     }

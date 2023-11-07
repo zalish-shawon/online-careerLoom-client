@@ -6,6 +6,7 @@ import app from '../../firebaseConfig';
 import Swal from 'sweetalert2';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const {createAccountWithPassword} = useContext(AuthContext)
@@ -43,7 +44,9 @@ const Register = () => {
 
     return (
         <div>
-         
+         <Helmet>
+            <title>CareerLoom | Register</title>
+            </Helmet>
             <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-md">
                     <img class="mx-auto h-10 w-auto" src="https://www.svgrepo.com/show/301692/login.svg" alt="Workflow"/>

@@ -19,6 +19,7 @@ import MyBid from './components/MyBid/MyBid.jsx';
 import BidRequest from './components/BidRequest/BidRequest.jsx';
 import NotFound from './components/PageNotFound/NotFound.jsx';
 import PrivateRoutes from './components/Private/PrivateRoutes.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -72,7 +73,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <AuthProvider>
+  <HelmetProvider>
   <RouterProvider router={router} />
+  </HelmetProvider>
   </AuthProvider>
   </React.StrictMode>,
 )

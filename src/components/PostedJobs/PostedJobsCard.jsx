@@ -39,19 +39,15 @@ const PostedJobsCard = ({ job, postedJobs ,setPostedjobs }) => {
           })
     }
 
-
-
-
-
     return (
 
         <div>
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <div class=" rounded overflow-hidden shadow-lg">
                 <img class="w-full h-[200px]" src={image} alt="Sunset in the mountains" />
                 <div class="px-6 py-2">
                     <div class="font-bold text-xl mb-2">{jobTitle}</div>
                     <p class="text-gray-700 text-base">
-                        {description?.slice(0, 90)}<span><a className="text-blue-400">...read more</a></span>
+                        {description?.slice(0, 90)}<span><a className="text-blue-400"></a></span>
                     </p>
                     
                 </div>

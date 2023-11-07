@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import PostedJobsCard from "./PostedJobsCard";
 import NoDataFound from "../NotDataFound/NoDataFound";
+import { Helmet } from "react-helmet-async";
 
 const PostedJobs = () => {
     const {user} = useContext(AuthContext);
@@ -22,6 +23,9 @@ const PostedJobs = () => {
 
     return (
         <div>
+            <Helmet>
+            <title>CareerLoom | Posted jobs</title>
+            </Helmet>
             {
                 postedJobs.length === 0 ? 
                 <NoDataFound></NoDataFound>

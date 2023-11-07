@@ -81,7 +81,11 @@ const BidReqTd = ({reqs}) => {
             <td class="py-3 px-6 text-center">
                 {
                     status === 'in progress' || status === 'rejected' || status === 'completed' ? 
-                    " "
+                    <div>
+                    <button disabled onClick={() => handleJobAccept(_id)} 
+                     className="text-white btn px-1 py-1 btn-primary mr-2">Accept</button>
+                 <button disabled onClick={() => handleJobReject(_id)}  className="text-white btn px-1 py-1 btn-secondary">Reject</button>
+                </div>
                     :
                     <div>
                         <button onClick={() => handleJobAccept(_id)} 

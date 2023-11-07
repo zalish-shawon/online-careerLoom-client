@@ -4,6 +4,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
     const navigate = useNavigate()
@@ -47,6 +48,9 @@ const JobDetails = () => {
 
     return (
         <div>
+            <Helmet>
+            <title>CareerLoom | Details</title>
+            </Helmet>
             <div>
                 <h1 className="text-4xl font-bold mt-10 text-center">Posted <span className="text-[orangered]">Job</span> Details</h1>
             </div>
