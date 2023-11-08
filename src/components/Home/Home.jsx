@@ -2,12 +2,14 @@
 
 import { Helmet } from "react-helmet-async";
 import JobCategory from "../JobCategory/JobCategory";
+import Marquee from "react-fast-marquee";
+import Section from "./Section";
 
 const Home = () => {
     return (
         <div className="max-w-[1200px] mx-auto pt-[40px] pb-[40px]">
             <Helmet>
-            <title>CareerLoom | Home</title>
+                <title>CareerLoom | Home</title>
             </Helmet>
             <div class=" px-4 sm:px-6 lg:px-8">
 
@@ -147,6 +149,9 @@ const Home = () => {
                 <div>
                     <JobCategory></JobCategory>
                 </div>
+            </div>
+            <div>
+                <Section></Section>
             </div>
         </div>
     );

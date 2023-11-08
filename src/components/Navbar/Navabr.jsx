@@ -4,16 +4,17 @@ import { AuthContext } from "../Provider/AuthProvider";
 import logo from "../../../public/Careerloom-logo.png"
 import toast, { Toaster } from "react-hot-toast";
 
+
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext)
 
   const handleLogout = () => {
     logOut()
-    .then(res => {
-     
-      toast.success('Successfully logged out!')
-    })
-    .catch(error => console.log(error.message))
+      .then(res => {
+
+        toast.success('Successfully logged out!')
+      })
+      .catch(error => console.log(error.message))
   }
 
 
@@ -27,11 +28,13 @@ const Navbar = () => {
     </>
 
   return (
-    <div className=" bg-blueGray-200 mt-2">
+    <div className=" bg-blueGray-200">
+       
       <Toaster
-  position="top-right"
-  reverseOrder={false}
-/>
+        position="top-right"
+        reverseOrder={false}
+      />
+     
       <div className="navbar max-w-[1200px] mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -54,30 +57,30 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-         
+
           {
             user ? <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="cursor-pointer flex items-center m-1 ml-3">
-              <div className="avatar online">
-                
-                 <div className="w-12 rounded-full">
-                  <img src={user?.photoURL} />
+              <label tabIndex={0} className="cursor-pointer flex items-center m-1 ml-3">
+                <div className="avatar online">
+
+                  <div className="w-12 rounded-full">
+                    <img src={user?.photoURL} />
+                  </div>
+
                 </div>
-                
-              </div>
-            </label>
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-              <div className="pl-5">
-                <p>{user?.displayName}</p>
-                 <li><button onClick={handleLogout}>Logout</button></li>
-              </div>
-            </ul>
-          </div>
-          : <Link to={'/login'}><button className="btn bg-[orangered] text-white">Login</button></Link>
+              </label>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <div className="pl-5">
+                  <p>{user?.displayName}</p>
+                  <li><button onClick={handleLogout}>Logout</button></li>
+                </div>
+              </ul>
+            </div>
+              : <Link to={'/login'}><button className="btn bg-[orangered] text-white">Login</button></Link>
 
           }
         </div>
-        
+
       </div>
     </div>
   );

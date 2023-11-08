@@ -41,7 +41,7 @@ const BidRequest = () => {
             <title>CareerLoom | Bid request</title>
             </Helmet>
             <div>
-                <h1 className="text-4xl font-bold mt-10 text-center">Bid <span className="text-[orangered]">Request</span> </h1>
+                <h1 className="text-4xl font-bold mt-10 mb-3 text-center">Bid <span className="text-[orangered]">Request</span> </h1>
             </div>
             {
                 bidReq.length === 0 ?

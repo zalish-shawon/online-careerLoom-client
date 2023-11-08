@@ -2,7 +2,7 @@
 
 const NoDataFound = () => {
     return (
-        <div className="max-w-[1200px] mx-auto">
+        <div className="">
             <div class="bg-gray-100">
                 <div class="flex h-[400px] items-center justify-center">
                     <div class="text-center">

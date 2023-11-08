@@ -45,7 +45,7 @@ const MyBid = () => {
             <title>CareerLoom | My bid</title>
             </Helmet>
             <div>
-                <h1 className="text-4xl font-bold mt-10 text-center">My <span className="text-[orangered]">Bids</span> </h1>
+                <h1 className="text-4xl font-bold mt-10 mb-3 text-center">My <span className="text-[orangered]">Bids</span> </h1>
             </div>
             <div>
         {
