@@ -28,7 +28,7 @@ const Navbar = () => {
     </>
 
   return (
-    <div className=" bg-blueGray-200">
+    <div className=" bg-blue-100">
        
       <Toaster
         position="top-right"
