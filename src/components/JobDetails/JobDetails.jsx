@@ -27,7 +27,7 @@ const JobDetails = () => {
         }
 
         try {
-            axios.post(`http://localhost:5000/mybids`, bidData,{
+            axios.post(`https://career-loom-server.vercel.app/mybids`, bidData,{
                 headers: { 'Content-Type': 'application/json'}
             })
             .then(res => {

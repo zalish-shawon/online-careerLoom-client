@@ -25,7 +25,7 @@ const UpdateJob = () => {
 
 
     try {
-        axios.put(`http://localhost:5000/jobs/${_id}`, updateData, {
+        axios.put(`https://career-loom-server.vercel.app/jobs/${_id}`, updateData, {
 
             headers: {
                 "Content-type": "application/json"

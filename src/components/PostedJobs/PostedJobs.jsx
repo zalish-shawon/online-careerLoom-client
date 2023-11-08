@@ -11,7 +11,7 @@ const PostedJobs = () => {
     
     useEffect(()=>{
         try {
-            axios.get('http://localhost:5000/jobs')
+            axios.get('https://career-loom-server.vercel.app/jobs')
             .then(res => setPostedjobs(res.data))
         } catch (error) {
             console.log(error.message);

@@ -13,7 +13,7 @@ const MybidsTd = ({bids}) => {
 
   const handleJobComplete = (_id) => {
     try {
-        axios.patch(`http://localhost:5000/mybids/${_id}`, completeStatus, {
+        axios.patch(`https://career-loom-server.vercel.app/mybids/${_id}`, completeStatus, {
             headers: {
                 'Content-type': 'application/json',
             }

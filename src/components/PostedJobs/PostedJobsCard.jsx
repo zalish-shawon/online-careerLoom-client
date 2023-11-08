@@ -19,7 +19,7 @@ const PostedJobsCard = ({ job, postedJobs ,setPostedjobs }) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:5000/jobs/${_id}`)
+                axios.delete(`https://career-loom-server.vercel.app/jobs/${_id}`)
                 .then(res => {
                     console.log(res.data);
                     if(res.data.deletedCount > 0) {

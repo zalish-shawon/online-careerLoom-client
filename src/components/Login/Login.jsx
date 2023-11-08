@@ -27,7 +27,7 @@ const Login = () => {
 
         const user = {email}
 
-        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+        axios.post('https://career-loom-server.vercel.app/jwt', user, {withCredentials: true})
             .then(res => {
                console.log(res.data);
             })
@@ -59,7 +59,7 @@ const Login = () => {
         const email = res.user.email
         const user = {email}
 
-        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+        axios.post('https://career-loom-server.vercel.app/jwt', user, {withCredentials: true})
             .then(res => {
                console.log(res.data);
             })

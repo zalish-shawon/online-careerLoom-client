@@ -50,13 +50,13 @@ const router = createBrowserRouter([
       {
         path: "/updateJob/:id",
         element: <UpdateJob></UpdateJob>,
-        loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+        loader: ({params}) => fetch(`https://career-loom-server.vercel.app/jobs/${params.id}`)
         
       },
       {
         path: "/details/:id",
         element: <PrivateRoutes><JobDetails></JobDetails></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+        loader: ({params}) => fetch(`https://career-loom-server.vercel.app/jobs/${params.id}`)
       },
       {
         path: "/mybids",

@@ -17,7 +17,7 @@ const BidReqTd = ({reqs}) => {
 
     const handleJobAccept = (_id) => {
         try {
-            axios.patch(`http://localhost:5000/mybids/${_id}`, newStatus, {
+            axios.patch(`https://career-loom-server.vercel.app/mybids/${_id}`, newStatus, {
                 headers: {
                     'Content-type': 'application/json',
                 }
@@ -34,7 +34,7 @@ const BidReqTd = ({reqs}) => {
 
     const handleJobReject = (_id) => {
         try {
-            axios.patch(`http://localhost:5000/mybids/${_id}`, rejectStatus, {
+            axios.patch(`https://career-loom-server.vercel.app/mybids/${_id}`, rejectStatus, {
                 headers: {
                     'Content-type': 'application/json',
                 }
