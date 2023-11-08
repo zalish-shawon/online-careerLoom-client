@@ -12,7 +12,7 @@ const BidRequest = () => {
 
     useEffect (() => {
         try {
-            axios.get("http://localhost:5000/mybids")
+            axios.get("http://localhost:5000/mybids", {withCredentials: true})
                 .then(res => {
                     // console.log(res.data);
                     setBidRequest(res.data);

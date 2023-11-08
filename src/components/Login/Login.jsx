@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -23,6 +24,13 @@ const Login = () => {
           'Successfully logged in!',
           'success'
         )
+
+        const user = {email}
+
+        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+            .then(res => {
+               console.log(res.data);
+            })
         
         navigate(location?.state ? location.state : "/")
         
@@ -48,6 +56,13 @@ const Login = () => {
                 'Successfully logged in!',
                 'success'
             )
+        const email = res.user.email
+        const user = {email}
+
+        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+            .then(res => {
+               console.log(res.data);
+            })
             
     })
     .catch(error => {
