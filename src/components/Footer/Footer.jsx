@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div>
-            <footer class="bg-blue-100 pt-8 pb-6 mt-14">
+            <footer class="bg-blue-100 pt-8 pb-6 mt-4">
                 <div class="container mx-auto px-4">
                     <div class="flex flex-wrap text-left lg:text-left">
                         <div class="w-full lg:w-6/12 px-4">
