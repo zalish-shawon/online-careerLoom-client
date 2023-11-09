@@ -11,10 +11,9 @@ const MainLayout = () => {
                 <Marquee pauseOnHover={true}>
                     <div className="flex gap-3">
                     <h1 className="text-xl text-white">
-                     We support Palestine.
+                    Welcome to the CareerLoom family! Thrilled to have you on board. 🚀
                     
                     </h1>
-                    <img className="w-[30px] h-[30px]" src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1f5-1f1f8.svg" alt="" />
                     </div>
 
                 </Marquee>

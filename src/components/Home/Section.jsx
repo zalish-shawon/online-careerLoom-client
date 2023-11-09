@@ -18,7 +18,7 @@ const Section = () => {
                                 <div className="flex items-center gap-4">
                                     <img
                                         alt="Man"
-                                        src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                        src="https://b.thumbs.redditmedia.com/2L_derOyylUorfQUZBtCidrvZ5wZaUAjN-2HEtNxOIU.jpg"
                                         className="h-14 w-14 rounded-full object-cover"
                                     />
 
@@ -76,15 +76,12 @@ const Section = () => {
                                             </svg>
                                         </div>
 
-                                        <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                        <p className="mt-0.5 text-lg font-medium text-gray-900">Sara Starr</p>
                                     </div>
                                 </div>
 
                                 <p className="mt-4 text-gray-700">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
-                                    rerum incidunt, a consequuntur recusandae ab saepe illo est quia
-                                    obcaecati neque quibusdam eius accusamus error officiis atque
-                                    voluptates magnam!
+                                I can't say enough good things about this online working place! It's become my second home, where I'm more productive than ever. The interface is intuitive, the tech support is top-notch, and the community of fellow remote workers is incredibly supportive.
                                 </p>
                             </blockquote>
 
@@ -92,7 +89,7 @@ const Section = () => {
                                 <div className="flex items-center gap-4">
                                     <img
                                         alt="Man"
-                                        src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                        src="https://pikwizard.com/pw/small/39573f81d4d58261e5e1ed8f1ff890f6.jpg"
                                         className="h-14 w-14 rounded-full object-cover"
                                     />
 
@@ -150,15 +147,12 @@ const Section = () => {
                                             </svg>
                                         </div>
 
-                                        <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                        <p className="mt-0.5 text-lg font-medium text-gray-900">John Doe</p>
                                     </div>
                                 </div>
 
                                 <p className="mt-4 text-gray-700">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
-                                    rerum incidunt, a consequuntur recusandae ab saepe illo est quia
-                                    obcaecati neque quibusdam eius accusamus error officiis atque
-                                    voluptates magnam!
+                                Working remotely, I was missing the office atmosphere. WorkWave Oasis has filled that void perfectly. The video chat feature and collaborative tools are amazing. The weekly virtual happy hours are a fun touch too!
                                 </p>
                             </blockquote>
 
@@ -166,7 +160,7 @@ const Section = () => {
                                 <div className="flex items-center gap-4">
                                     <img
                                         alt="Man"
-                                        src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                        src="https://i.pinimg.com/originals/9f/74/53/9f74535608abc523efe3eb37a9a30a54.jpg"
                                         className="h-14 w-14 rounded-full object-cover"
                                     />
 
@@ -229,10 +223,7 @@ const Section = () => {
                                 </div>
 
                                 <p className="mt-4 text-gray-700">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
-                                    rerum incidunt, a consequuntur recusandae ab saepe illo est quia
-                                    obcaecati neque quibusdam eius accusamus error officiis atque
-                                    voluptates magnam!
+                                eOffice Evolve offers a slick platform with a diverse range of workspaces. The quality of internet connection is great, and the calendar integration is handy. The only thing that could make it better is more timezone-friendly events
                                 </p>
                             </blockquote>
                         </div>
