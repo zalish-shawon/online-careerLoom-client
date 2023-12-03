@@ -82,9 +82,9 @@ const JobDetails = () => {
                                         <div class="badge badge-primary badge-outline">{category}</div>
                                     </div>
                                     <div className="flex gap-1 items-center px-6 mt-2">
-                                        <p className="font-semibold text-gray-500">Min price</p> <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">${minPrice}</span>
+                                        <p className="font-semibold text-gray-500">Min price</p> <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded   border border-gray-500">${minPrice}</span>
                                         <p className="font-semibold text-gray-500">Max price</p>
-                                        <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">${maxPrice}</span>
+                                        <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border border-gray-500">${maxPrice}</span>
 
                                     </div>
                                 </div>
@@ -97,39 +97,39 @@ const JobDetails = () => {
             <div>
                 <h1 className="text-4xl font-bold text-center">Place your <span className="text-[blue]">Job</span> bid</h1>
                 <div>
-                <section class="bg-white dark:bg-gray-900">
+                <section class="bg-white">
                         <div class="py-8 pt-2 px-4 mx-auto max-w-2xl lg:py-6">
 
                             <form onSubmit={handleBideJob}  method="POST" action="#">
                                 <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                                     <div class="sm:col-span-2">
-                                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Employer Email</label>
-                                        <input defaultValue={email} disabled type="email" name="email" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required />
+                                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Employer Email</label>
+                                        <input defaultValue={email} disabled type="email" name="email" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="" required />
                                     </div>
                                     <div class="sm:col-span-2">
-                                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bidder Email</label>
-                                        <input defaultValue={user?.email} disabled type="email" name="bidderEmail" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required />
+                                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Bidder Email</label>
+                                        <input defaultValue={user?.email} disabled type="email" name="bidderEmail" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="" required />
                                     </div>
                                     
                                     <div class="w-full">
-                                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deadline</label>
-                                        <input type="date" name="date" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product brand" required />
+                                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 ">Deadline</label>
+                                        <input type="date" name="date" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Product brand" required />
                                     </div>
                                 
                                     <div>
-                                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
-                                        <input type="text" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter minimum price" required />
+                                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Price</label>
+                                        <input type="text" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Enter minimum price" required />
                                     </div>
                                     
                                     
                                 </div>
                                 {
                                     user?.email === email ? 
-                                    <button disabled type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-gray-400 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                                    <button disabled type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-gray-400 rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800">
                                     Bid is unavailable
                                 </button>
                                 :
-                                <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-[orangered] rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                                <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-[orangered] rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800">
                                     Bid on this project
                                 </button>
                                 }
