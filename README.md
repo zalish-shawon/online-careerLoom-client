@@ -2,7 +2,8 @@
 
 ![Image](/public/ss.png)
 
-- https://careerloom-89809.web.app/
+- Live link: https://careerloom-89809.web.app/
+- Server link: https://github.com/zalish-shawon/online-careerLoom-server
 
 # Project Features
 
@@ -13,7 +14,7 @@
 - The job owner also sees a job bid request from the bid request route, and he or she can accept or reject that job.
 - Users can also post a new job from their account.
 - This web application uses a Firebase authentication system.
-- For the backend, this application has a Node.js server with a monogodb database.
+- For the backend, this application has a Node.js server with a MonogoDB database.
 
 
 
