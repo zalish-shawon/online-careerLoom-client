@@ -16,5 +16,9 @@
 - This web application uses a Firebase authentication system.
 - For the backend, this application has a Node.js server with a MonogoDB database.
 
+**Technology**
+: React.js, Tailwind CSS, MongoDB, Express.js, Node.js, Private route, Firebase Authentication.
+
+
 
 
