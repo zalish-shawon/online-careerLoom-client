@@ -13,7 +13,6 @@ const Footer = () => {
                             </h5>
                             <div class="mt-6 lg:mb-0 mb-6">
                                 <img className="w-[300px]" src="https://careerloom.com/wp-content/uploads/2022/03/Careerloom-logo.png" alt="" />
-                                
                             </div>
                         </div>
                         <div class="w-full lg:w-6/12 px-4">
