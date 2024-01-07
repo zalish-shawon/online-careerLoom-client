@@ -2,11 +2,39 @@
 
 import { Helmet } from "react-helmet-async";
 import JobCategory from "../JobCategory/JobCategory";
+import './section.css'
 import Section from "./Section";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const images = [
+        'https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?w=740&t=st=1704618617~exp=1704619217~hmac=fdcbf79638b73f90bd75e306020047f7b9695cdbc74cab89ed08712ee8596bc0',
+      'https://img.freepik.com/free-photo/smiling-young-man-filming-his-video-blog-episode-about-new-tech-devices-while-sitting-kitchen-table-with-laptop-showing-bunch-money-banknotes_171337-5530.jpg?w=740&t=st=1704618097~exp=1704618697~hmac=f674b3f9ab713e925deaa4608b7e2decd544072cf4af0268b43a622774f9a3fb',
+      'https://img.freepik.com/free-photo/modern-technology-gadgets-job-communication-concept-happy-charming-young-woman-with-hair-bun-holding-round-eyeglasses-keyboarding-laptop-pc-browsing-internet-chatting-online_343059-3055.jpg?w=740&t=st=1704618413~exp=1704619013~hmac=007b8638bb7db86c1ae1a74cd1379fcf7e626458b7b34d221b779625675b07ed',
+      'https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?w=740&t=st=1704618490~exp=1704619090~hmac=821971f1ee8685d2d83427c318a8843b0794996d8fd3a256c3e65d7f477dbbba',
+      'https://img.freepik.com/free-photo/close-up-image-programer-working-his-desk-office_1098-18707.jpg?w=740&t=st=1704619151~exp=1704619751~hmac=4b2b56fe50948480e332930bc69d2c5c86ef143fcaa8205aa93a72717ecb2622'
+      
+    ];
+  
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        // Update the current image index
+        setCurrentImageIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 2000); // Change the interval as needed (in milliseconds)
+  
+      // Clear the interval when the component is unmounted
+      return () => clearInterval(intervalId);
+    }, [currentImageIndex, images.length]);
+  
+
+
     return (
-        <div className="max-w-[1200px] mx-auto pt-[40px] pb-[40px]">
+        <div className="max-w-[90%] mx-auto pb-[40px]">
             <Helmet>
                 <title>CareerLoom | Home</title>
             </Helmet>
@@ -14,12 +42,12 @@ const Home = () => {
 
                 <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
                     <div>
-                        <h1 class="block text-3xl font-bold text-gray-400 sm:text-4xl lg:text-6xl lg:leading-tight">Start your journey with <span class="text-[orangered]">CareerLoom</span></h1>
-                        <p class="mt-3 text-lg text-gray-800">Hand-picked professionals and expertly crafted components, designed for any kind of entrepreneur.</p>
+                        <h1 class="block text-3xl font-bold  sm:text-4xl lg:text-6xl lg:leading-tight">Start your journey with <span class="text-blue-700">CareerLoom</span></h1>
+                        <p class="mt-3 text-xl font-semibold text-gray-800">Hand-picked professionals and expertly crafted components, designed for any kind of entrepreneur.</p>
 
 
                         <div class="mt-7 grid gap-3 w-full sm:inline-flex">
-                            <a class="inline-flex justify-center items-center gap-x-3 text-center bg-[orangered] hover:bg-orange-600 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4" href="#">
+                            <a class="inline-flex justify-center items-center gap-x-3 text-center bg-blue-700 hover:bg-blue-900 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4" href="#">
                                 Get started
                                 <svg class="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -112,7 +140,7 @@ const Home = () => {
 
 
                     <div class="relative ml-4">
-                        <img class="w-full rounded-md" src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80" alt="Image Description" />
+                        <img class="w-full rounded-md" src={images[currentImageIndex]} alt="Image Description" />
                         <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 w-full h-full rounded-md mt-4 -mb-4 mr-4 -ml-4 lg:mt-6 lg:-mb-6 lg:mr-6 lg:-ml-6"></div>
 
 
@@ -143,8 +171,9 @@ const Home = () => {
                 </div>
 
             </div>
+            
             <div>
-                <h1 className="border-2 border-rose-100 p-3 text-5xl font-bold text-center mt-16 text-gray-400">Browse By <span className="text-[orangered]">Job Category</span></h1>
+                <h1 className="border-2 border-blue-100 p-3 text-5xl font-bold text-center mt-16 ">Browse By <span className="text-blue-700">Job Category</span></h1>
                 <div>
                     <JobCategory></JobCategory>
                 </div>

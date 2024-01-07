@@ -1,11 +1,21 @@
 /* eslint-disable react/no-unknown-property */
 // Import Swiper React components
 import Marquee from "react-fast-marquee";
+import PaymentSecurity from "./PaymentSecurity";
+import Pricing from "./Pricing";
+import Features from "./Features";
 
 
 const Section = () => {
     return (
         <div>
+
+            <Pricing></Pricing>
+            
+            <PaymentSecurity></PaymentSecurity>
+
+            <Features></Features>
+
             <div className='mt-8 text-center border-2 border-indigo-100 p-3'>
                 <h2 class="text-5xl font-bold text-indigo-600">Testimonials</h2>
                 <p class="text-lg text-gray-600">What others say about us</p>
@@ -230,78 +240,10 @@ const Section = () => {
                     </div>
                 </section>
             </div>
-            {/* <div className='mt-5 mb-8'>
-                <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    navigation={true}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper"
-                >
-                    <SwiperSlide>
-
-                        <div class="h-screen flex flex-col items-center justify-center gap-8 bg-indigo-100">
-                            <h1 class="text-4xl text-gray-600 leading-relaxed text-center w-4/5">
-                                "Virtual Vibe Hub is a great place to get stuff done. The variety of virtual office setups, from cozy cafes to quiet libraries, is a game-changer. If they could just improve the WiFi reliability, it'd be a perfect 5 for me."
-                            </h1>
-                            <div class="flex items-center gap-4">
-
-                                <div class="flex flex-col tracking-wider">
-                                    <label class="text-gray-600 font-bold text-base">Jason L.</label>
-                                    <label class="text-gray-600 font-normal text-sm">Reactjs Developer</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </SwiperSlide>
-                    <SwiperSlide>
-
-                        <div class="w-full h-screen flex flex-col items-center justify-center gap-8 bg-indigo-100">
-                            <h1 class="text-4xl text-gray-600 leading-relaxed text-center w-4/5">
-                                "I can't say enough good things about this online working place! It's become my second home, where I'm more productive than ever. The interface is intuitive, the tech support is top-notch, and the community of fellow remote workers is incredibly supportive."
-                            </h1>
-                            <div class="flex items-center gap-4">
-
-                                <div class="flex flex-col tracking-wider">
-                                    <label class="text-gray-600 font-bold text-base">Rai Raksa Muhamad</label>
-                                    <label class="text-gray-600 font-normal text-sm">Fullstack Developer</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </SwiperSlide>
-                    <SwiperSlide>
-
-                        <div class="w-full h-screen flex flex-col items-center justify-center gap-8 bg-indigo-100">
-                            <h1 class="text-4xl text-gray-600 leading-relaxed text-center w-4/5">
-                                "Working remotely, I was missing the office atmosphere. WorkWave Oasis has filled that void perfectly. The video chat feature and collaborative tools are amazing. The weekly virtual happy hours are a fun touch too!"
-                            </h1>
-                            <div class="flex items-center gap-4">
-
-                                <div class="flex flex-col tracking-wider">
-                                    <label class="text-gray-600 font-bold text-base">Megan R.</label>
-                                    <label class="text-gray-600 font-normal text-sm">Nodejs Developer</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </SwiperSlide>
-
-
-                </Swiper>
-
-
-            </div> */}
+    
             <div>
                 <div className='mt-8 text-center border-2 border-indigo-100 p-3'>
-                    <h2 class="text-5xl font-bold text-gray-400">Our Trusted Sponsors</h2>
+                    <h2 class="text-5xl font-bold text-gray-600">Our Trusted Sponsors</h2>
 
                 </div>
                 <Marquee>
@@ -372,13 +314,14 @@ const Section = () => {
 
 
             <div>
-                <section class="bg-white  mt-3">
+            <section className=" mt-8 p-10 bg-[#F0F2F5]">
+
                     <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
                         <div class="mx-auto max-w-screen-md sm:text-center">
-                            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-500 sm:text-4xl ">Sign up for our <span className="text-gray-400">newsletter</span></h2>
-                            <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl ">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+                            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-500 sm:text-4xl ">Sign up for our <span className="text-blue-600">Newsletter</span></h2>
+                            <p class="mx-auto max-w-2xl font-light text-gray-500 mb-5 sm:text-xl ">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
                             <form action="#">
-                                <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+                                <div class="items-center mx-auto mb-3 space-y-1 max-w-screen-sm sm:flex sm:space-y-0">
                                     <div class="relative w-full">
                                         <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900 ">Email address</label>
                                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">

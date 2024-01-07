@@ -21,6 +21,7 @@ const Navbar = () => {
   const navItems =
     <>
       <NavLink to={'/'}><li className="font-semibold"><a>Home</a></li></NavLink>
+      <NavLink to={'/services'}><li className="font-semibold"><a>Services</a></li></NavLink>
       <NavLink to={'/addJob'}><li className="font-semibold"><a>Add job</a></li></NavLink>
       <NavLink to={'/postedJobs'}><li className="font-semibold"><a>My posted jobs</a></li></NavLink>
       <NavLink to={'/mybids'}><li className="font-semibold"><a>My bid</a></li></NavLink>
@@ -29,7 +30,6 @@ const Navbar = () => {
 
   return (
     <div className=" bg-blue-100">
-       
       <Toaster
         position="top-right"
         reverseOrder={false}
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </div>
               </ul>
             </div>
-              : <Link to={'/login'}><button className="btn bg-[orangered] text-white">Login</button></Link>
+              : <Link to={'/login'}><button className="btn bg-blue-700 hover:bg-blue-900 text-white">Login</button></Link>
 
           }
         </div>

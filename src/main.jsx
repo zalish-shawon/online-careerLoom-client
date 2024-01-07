@@ -20,6 +20,7 @@ import BidRequest from './components/BidRequest/BidRequest.jsx';
 import NotFound from './components/PageNotFound/NotFound.jsx';
 import PrivateRoutes from './components/Private/PrivateRoutes.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import Services from './components/Service/Services.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/services",
+        element: <Services></Services>
       },
       {
         path: "/register",
