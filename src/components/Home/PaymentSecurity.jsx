@@ -5,7 +5,7 @@ const PaymentSecurity = () => {
             <div>
             <h1 className="border-2 border-[#95eecd77] p-3 text-5xl font-bold text-center mt-16 ">Our  <span className="text-[#95EECD]">Payment Security</span></h1>
             </div>
-            <div className="mt-10 bg-[#F0F2F5] p-10">
+            <div  className="mt-10 bg-[#F0F2F5] p-10">
             <h1 className="text-3xl font-bold ">Get Work Done fater On Meer , <br />
                 With Confidence</h1>
                <div className="flex flex-col lg:flex-row gap-7">

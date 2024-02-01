@@ -38,10 +38,10 @@ const Home = () => {
             <Helmet>
                 <title>CareerLoom | Home</title>
             </Helmet>
-            <div class=" px-4 sm:px-6 lg:px-8">
+            <div data-aos="zoom-in" data-aos-duration="1000"  class=" px-4 sm:px-6 lg:px-8">
 
                 <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-                    <div>
+                    <div >
                         <h1 class="block text-3xl font-bold  sm:text-4xl lg:text-6xl lg:leading-tight">Start your journey with <span class="text-blue-700">CareerLoom</span></h1>
                         <p class="mt-3 text-xl font-semibold text-gray-800">Hand-picked professionals and expertly crafted components, designed for any kind of entrepreneur.</p>
 
@@ -174,7 +174,7 @@ const Home = () => {
             
             <div>
                 <h1 className="border-2 border-blue-100 p-3 text-5xl font-bold text-center mt-16 ">Browse By <span className="text-blue-700">Job Category</span></h1>
-                <div>
+                <div data-aos="zoom-in" data-aos-duration="1000">
                     <JobCategory></JobCategory>
                 </div>
             </div>

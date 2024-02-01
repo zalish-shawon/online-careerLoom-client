@@ -21,6 +21,8 @@ import NotFound from './components/PageNotFound/NotFound.jsx';
 import PrivateRoutes from './components/Private/PrivateRoutes.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Services from './components/Service/Services.jsx';
+import Blogs from './components/Blogs/Blogs.jsx';
+import AllJobs from './components/AllJobs/AllJobs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>
+      },
+      {
+        path: "/alljobs",
+        element: <AllJobs></AllJobs>
       },
       {
         path: "/services",

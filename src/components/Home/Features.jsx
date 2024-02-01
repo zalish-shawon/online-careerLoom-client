@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unknown-property */
-import React from 'react';
 
 const Features = () => {
     return (
@@ -8,7 +7,7 @@ const Features = () => {
                 <h1 className="border-2 border-blue-100 p-3 text-5xl font-bold text-center mt-16 ">Our <span className="text-blue-700">Features</span></h1>
             </div>
 
-            <div class="-mx-4 flex flex-wrap mt-5">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="-mx-4 flex flex-wrap mt-5">
 
                 <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                     <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">

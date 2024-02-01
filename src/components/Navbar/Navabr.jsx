@@ -21,21 +21,38 @@ const Navbar = () => {
   const navItems =
     <>
       <NavLink to={'/'}><li className="font-semibold"><a>Home</a></li></NavLink>
+      <NavLink to={'/alljobs'}><li className="font-semibold"><a>All Jobs</a></li></NavLink>
       <NavLink to={'/services'}><li className="font-semibold"><a>Services</a></li></NavLink>
-      <NavLink to={'/addJob'}><li className="font-semibold"><a>Add job</a></li></NavLink>
-      <NavLink to={'/postedJobs'}><li className="font-semibold"><a>My posted jobs</a></li></NavLink>
-      <NavLink to={'/mybids'}><li className="font-semibold"><a>My bid</a></li></NavLink>
-      <NavLink to={'/bidsRequest'}><li className="font-semibold"><a>Bid request</a></li></NavLink>
+      <NavLink to={'/blogs'}><li className="font-semibold"><a>Blogs</a></li></NavLink>
+      {
+        user && 
+        <NavLink to={'/addJob'}><li className="font-semibold"><a>Add job</a></li></NavLink>
+      }
+      {
+        user &&
+        <NavLink to={'/postedJobs'}><li className="font-semibold"><a>My posted jobs</a></li></NavLink>
+
+      }
+      {
+        user &&
+        <NavLink to={'/mybids'}><li className="font-semibold"><a>My bid</a></li></NavLink>
+
+      }
+      {
+        user &&
+        <NavLink to={'/bidsRequest'}><li className="font-semibold"><a>Bid request</a></li></NavLink>
+
+      }
     </>
 
   return (
-    <div className=" bg-blue-100">
+    <div className=" bg-blue-100 sticky top-0 z-50">
       <Toaster
         position="top-right"
         reverseOrder={false}
       />
      
-      <div className="navbar max-w-[1200px] mx-auto ">
+      <div className="navbar max-w-[90%] mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

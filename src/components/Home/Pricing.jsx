@@ -7,7 +7,7 @@ const Pricing = () => {
             <h1 className="border-2 border-[#ea449428] p-3 text-5xl font-bold text-center mt-16 ">Our  <span className="text-[#E33787]">Pricing Policy</span></h1>
             </div>
             
-            <section className="bg-gray-100 mt-8">
+            <section data-aos="zoom-in" data-aos-duration="1000"  className="bg-gray-100 mt-8">
                 <div className="relative max-w-screen-xl px-8 py-24 mx-auto md:px-12 " bis_skin_checked="1">
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2 sm:mx-auto xl:grid-cols-2" bis_skin_checked="1">
                     <section>
@@ -36,7 +36,7 @@ const Pricing = () => {
                         </ul>
                       </div>
                     </section>
-                    <section className="flex flex-col justify-between h-full p-8 shadow-xl just shadow-pink-500/30 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-600">
+                    <section data-aos="flip-left" data-aos-duration="1000" className="flex flex-col justify-between h-full p-8 shadow-xl just shadow-pink-500/30 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-600">
                       <div bis_skin_checked="1">
                         <div className="flex flex-col gap-2" bis_skin_checked="1">
                           <div bis_skin_checked="1">
