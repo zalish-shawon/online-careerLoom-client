@@ -17,7 +17,7 @@ const GraphicsJobs = ({ job }) => {
         <div>
             <div class="max-w-2xl mx-auto">
 
-                <div class="bg-white shadow-md border border-gray-200 rounded-lg lg:max-w-sm h-[460px]">
+                <div class="bg-white shadow-md border border-gray-200 rounded-lg lg:max-w-lg h-[460px]">
 
                     <img class="rounded-t-lg w-full h-[200px]" src={image} alt="" />
 

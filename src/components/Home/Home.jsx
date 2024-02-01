@@ -165,7 +165,6 @@ const Home = () => {
                                 <rect x="531" y="49" width="99" height="99" fill="currentColor" />
                             </svg>
                         </div>
-
                     </div>
 
                 </div>
